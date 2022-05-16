@@ -1,13 +1,11 @@
-# brokers_management
+# websites_management
 
-- Install Nodemon, Sequelize CLI and Typescript Globally in your machine.
-    - npm i -g nodemon 
-    - npm i -g typescript
+- Install Sequelize CLI Globally in your machine.
     - npm i -g sequelize-cli
 
 - Set environment variables in .env file
 
-- Start Project:- npm start 
+- Start Project: npm start 
 
 
 # MIGRATION PROCESS
@@ -38,3 +36,11 @@
 
     - Run Specific Seeder
         command:- npx sequelize db:seed --seed file_name.js
+
+FINAL OUTPUT
+
+Graph:
+<img width="1259" alt="Screenshot 2022-05-16 at 9 36 10 PM" src="https://user-images.githubusercontent.com/998852/168636481-2eb98983-c382-450c-ad57-7c4ba08c3cc7.png">
+
+Data Table:
+<img width="1183" alt="Screenshot 2022-05-16 at 9 36 21 PM" src="https://user-images.githubusercontent.com/998852/168636545-598e728a-36c6-4c14-9cce-773c21c40344.png">
