@@ -1,8 +1,12 @@
 {
-  "name": "brokers_management",
+  "name": "websites_management",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines" : { 
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
+  },
   "scripts": {
     "tsc": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
