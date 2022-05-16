@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "test-assignment",
+    "password": "gfdjh24m,sddsf",
+    "database": "postgres",
+    "host": "test-instance-1-cluster.cluster-cys30lik4v4w.us-east-1.rds.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "root",
+    "database": "brokers-mangements",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "root",
+    "database": "brokers-mangements",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

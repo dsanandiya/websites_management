@@ -1,0 +1,40 @@
+{
+  "name": "brokers_management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "start": "npm run env && tsc  --watch & nodemon dist/index.js",
+    "build": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
+    "env": "sync-dotenv --sample env.sample"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsanandiya/websites_management.git"
+  },
+  "author": "Darshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsanandiya/websites_management/issues"
+  },
+  "homepage": "https://github.com/dsanandiya/websites_management#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "class-validator": "^0.13.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "moment": "^2.29.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0",
+    "sync-dotenv": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.32",
+    "sequelize-cli": "^6.4.1",
+    "nodemon": "^2.0.3",
+    "typescript": "^3.8.3"
+  }
+}

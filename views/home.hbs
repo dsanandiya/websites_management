@@ -1,0 +1,99 @@
+<div class="mt-5">
+    <h3>Websites Businesses By Months</h3>
+    <canvas class="mt-4" id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    // Chart config
+    const _info =
+        {{{ chartInfo }}}
+    const config = {
+        type: 'line',
+        data: {
+            labels: _info.labels,
+            datasets: _info.dataset,
+            yAxisID: 'yAxes'
+        }, options: {
+            scales: {
+                yAxes: {
+                    title: {
+                        display: true,
+                        text: "Total Business",
+                        font: {
+                            size: 15
+                        },
+                        color:"rgb(99, 161, 58)"
+                    },
+                    ticks: {
+                        precision: 0
+                    }
+                },
+                 xAxes: {
+                    title: {
+                        display: true,
+                        text: "Last one year data",
+                        font: {
+                            size: 15
+                        },
+                         color:"rgb(207, 70, 58)"
+                    },
+                    ticks: {
+                        precision: 0
+                    }
+                },
+            }
+        }
+    };
+    const myChart = new Chart(document.getElementById('myChart'), config);
+
+    // Datatable config
+    $(document).ready(function () {
+        $('#dtOrderExample').DataTable({
+            "order": [[
+                1, "asc"]],
+            "paging": true,
+        }); $('.dataTables_length').addClass('bs-select');
+    });
+</script>
+
+
+<div class="mt-5">
+    <h3>Businesses Revenue</h3>
+    <table id="dtOrderExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="th-sm">No.
+                </th>
+                <th class="th-sm">Listing ID
+                </th>
+                <th class="th-sm">Listing Name
+                </th>
+                <th class="th-sm">Listing Month
+                </th>
+                <th class="th-sm">Listing Date
+                </th>
+                <th class="th-sm">Broker Name
+                </th>
+                <th class="th-sm">Total Revenue (USD)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each revenueList}}
+            <tr>
+                <td>
+                    {{inc @index}}
+                </td>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{month}}</td>
+                <td>{{date}}</td>
+                <td>{{brokername}}</td>
+                <td>{{totalrevenue}}</td>
+                {{/each}}
+        </tbody>
+    </table>
+</div>
